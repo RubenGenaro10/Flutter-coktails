@@ -16,6 +16,7 @@ class AppDatabase {
 
   Future<Database> _initDatabase() async {
     final path = join(await getDatabasesPath(), DatabaseConstants.databaseName);
+
     return await openDatabase(
       path,
       version: 1,

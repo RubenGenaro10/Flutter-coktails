@@ -2,7 +2,7 @@ import 'package:easy_cocktail/data/local/cocktail_dao.dart';
 import 'package:easy_cocktail/data/remote/cocktail_service.dart';
 import 'package:easy_cocktail/data/repositories/cocktail_repository_impl.dart';
 import 'package:easy_cocktail/presentation/blocs/cocktails_bloc.dart';
-import 'package:easy_cocktail/presentation/pages/cocktails_page.dart';
+import 'package:easy_cocktail/presentation/pages/main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,7 +23,7 @@ class MainApp extends StatelessWidget {
       create: (context) => CocktailsBloc(repository: repository),
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: CocktailsPage(),
+        home: MainPage(),
       ),
     );
   }
