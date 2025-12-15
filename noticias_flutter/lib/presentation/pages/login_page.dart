@@ -29,8 +29,8 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
-        backgroundColor: Colors.blue,
+        title: const Text('Iniciar Sesión'),
+        backgroundColor: const Color.fromARGB(255, 233, 40, 6),
         foregroundColor: Colors.white,
       ),
       body: BlocListener<AuthBloc, AuthState>(
@@ -60,7 +60,7 @@ class _LoginPageState extends State<LoginPage> {
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
-                      color: Colors.blue,
+                      color: Color.fromARGB(255, 216, 55, 14),
                     ),
                   ),
                   const SizedBox(height: 60),
@@ -124,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                                   }
                                 },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue,
+                            backgroundColor: const Color.fromARGB(255, 224, 72, 12),
                             foregroundColor: Colors.white,
                             padding: const EdgeInsets.symmetric(vertical: 16),
                           ),
