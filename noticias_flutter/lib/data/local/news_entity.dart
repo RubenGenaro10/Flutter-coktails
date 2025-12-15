@@ -23,6 +23,7 @@ class NewsEntity {
     required this.sourceName,
   });
 
+
   Map<String, dynamic> toMap() {
     return {
       'title': title,
@@ -36,6 +37,7 @@ class NewsEntity {
       'source_name': sourceName,
     };
   }
+
 
   factory NewsEntity.fromMap(Map<String, dynamic> map) {
     return NewsEntity(
@@ -64,6 +66,7 @@ class NewsEntity {
       sourceName: news.sourceName,
     );
   }
+
 
   News toDomain({bool isFavorite = true}) {
     return News(

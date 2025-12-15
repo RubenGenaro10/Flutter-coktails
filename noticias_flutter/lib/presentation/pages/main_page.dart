@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:noticias_flutter/presentation/blocs/auth_bloc.dart';
+import 'package:noticias_flutter/presentation/blocs/auth_event.dart';
 import 'package:noticias_flutter/presentation/pages/favorites_page.dart';
 import 'package:noticias_flutter/presentation/pages/home_page.dart';
+import 'package:noticias_flutter/presentation/pages/login_page.dart';
 import 'package:noticias_flutter/presentation/pages/news_page.dart';
 
 class MainPage extends StatefulWidget {
@@ -21,6 +25,22 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Noticias App'),
+        backgroundColor: Colors.blue,
+        foregroundColor: Colors.white,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.logout),
+            onPressed: () {
+              context.read<AuthBloc>().add(const LogoutRequested());
+              Navigator.of(context).pushReplacement(
+                MaterialPageRoute(builder: (context) => const LoginPage()),
+              );
+            },
+          ),
+        ],
+      ),
       body: SafeArea(child: pages[selectedIndex]),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: selectedIndex,

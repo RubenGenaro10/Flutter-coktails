@@ -641,3 +641,23 @@ class MainApp extends StatelessWidget {
 // );
 
 ```
+### EJMPLO DE PROMT
+Ayudame a generar un programa donde se encargue de la busqueda de noticias, este programa tiene 3 secciones o paginas.
+Home(Un texto que dice "HOME " ),News(buscar noticias y marcar como favorito), Favorites(ver lista de favoritos).
+
+Para esto debes de usar la estructura de carpetas , arquittectura , forma de codificar que se encuentra como ejemplo en contexto.md
+
+En este caso la aplicacion se trata de noticas asi que cambia el nombre de las clases ,variables , funciones , a "New" donde se vea pertinente.
+
+En este caso mi enpoint usado sera:
+baseUrl = 'https://dev.formandocodigo.com';
+cocktailsEndpoint = 'articles.php'
+
+Prueba GET:
+https://dev.formandocodigo.com/articles.php?description=fujimori
+
+Resultado:
+[
+{
+"source": {
+"id": null.....}]
